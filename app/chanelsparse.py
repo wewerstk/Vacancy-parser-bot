@@ -1,6 +1,5 @@
 from telethon import TelegramClient
 import re
-from dotenv import load_dotenv
 from config import API_HASH, API_ID
 
 class ChannelResearch():
@@ -50,7 +49,6 @@ class ChannelResearch():
     
     async def parse_vacancies_async(self):
         results = []
-        load_dotenv(override=True)
         async with TelegramClient('session_vacancies', api_id=API_ID, api_hash=API_HASH) as client:
             for channel in self.channel_list:
                 found = False
