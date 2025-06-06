@@ -9,7 +9,7 @@ router=Router()
 async def send_and_dispatch(bot: Bot):
     msg = await send_vacancies()
     await bot.send_message(
-        chat_id=-1002876552114,
+        chat_id=???????????,
         text=msg,
         parse_mode="HTML",
         message_thread_id=2
